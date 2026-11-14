@@ -5,9 +5,8 @@ $host = "127.0.0.1";
 $port = "3306";
 $dbname = "datadoan";
 $username = "root";
-// Nhập mật khẩu MySQL thực tế của WampServer.
-// Nếu tài khoản root không có mật khẩu thì để trống.
-$password = "";
+
+$password = getenv('DB_PASWORD')?:"";
 try {
 
     $conn = new PDO(
