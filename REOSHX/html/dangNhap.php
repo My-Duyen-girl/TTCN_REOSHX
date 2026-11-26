@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Điều hướng theo từng vai trò
             if ($user['VaiTro'] === 'Admin') {
                 $_SESSION['HoTen'] = 'Quản trị viên';
-                header('Location: admin.php');
+                header('Location: admin_tongquan.php');
                 exit;
             } elseif ($user['VaiTro'] === 'Nhân viên') {
                 $stmtNV = $conn->prepare("SELECT MaNhanVien, HoTen FROM NhanVien WHERE MaTaiKhoan = ?");
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 $_SESSION['MaNhanVien'] = $nv['MaNhanVien'] ?? null;
                 $_SESSION['HoTen']      = $nv['HoTen'] ?? 'Nhân viên';
-                header('Location: nhanvien.php');
+                header('Location: nhanvien_tongquan.php');
                 exit;
             } else {
                 $stmtKH = $conn->prepare("SELECT MaKhachHang, HoTen FROM KhachHang WHERE MaTaiKhoan = ?");

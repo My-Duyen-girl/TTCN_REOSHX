@@ -208,19 +208,21 @@ body {
     gap: 14px;
 }
 
-.hero-art-box {
-    background-color: #f3e7d3;
-    border-radius: 20px;
-    height: 360px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 28px rgba(43, 61, 48, 0.06);
+.hero-image-box {
+    width: 300px;          
+    height: 320px;
+    max-width: 100%;
+    flex-shrink:0;
+    border-radius: 24px;   
+    overflow: hidden;      
+    box-shadow: 0 12px 30px rgba(36, 52, 41, 0.08);
 }
 
-.hero-art-box svg {
-    width: 240px;
-    height: 240px;
+.hero-image-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;     
+    display: block;
 }
 
 /* ================= SERVICES SECTION ================= */
@@ -423,16 +425,7 @@ body {
 
             <!-- Hình minh họa tối giản giống bản thiết kế -->
             <div class="hero-art-box">
-                <svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Tai trái -->
-                    <rect x="36" y="64" width="66" height="128" rx="33" fill="#986c4a"/>
-                    <!-- Tai phải -->
-                    <rect x="158" y="64" width="66" height="128" rx="33" fill="#986c4a"/>
-                    <!-- Khuôn mặt tròn -->
-                    <circle cx="130" cy="134" r="78" fill="#b48b63"/>
-                    <!-- Chiếc mũi nhỏ -->
-                    <circle cx="130" cy="146" r="11" fill="#31473a"/>
-                </svg>
+                <img src="../image/cat_tia_tam.jpg" alt="Chăm sóc bé cưng tại Pet Care & Spa">
             </div>
         </div>
     </section>
